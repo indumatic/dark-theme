@@ -1,0 +1,100 @@
+:root {
+    /** Dark theme primary colors */
+    --clr-primary-a0: #779047;
+    --clr-primary-a10: #869c5b;
+    --clr-primary-a20: #95a86e;
+    --clr-primary-a30: #a4b482;
+    --clr-primary-a40: #b3c096;
+    --clr-primary-a50: #c2ccaa;
+
+    /** Dark theme surface colors */
+    --clr-surface-a0: #121212;
+    --clr-surface-a10: #282828;
+    --clr-surface-a20: #3f3f3f;
+    --clr-surface-a30: #575757;
+    --clr-surface-a40: #717171;
+    --clr-surface-a50: #8b8b8b;
+
+    /** Dark theme tonal surface colors */
+    --clr-surface-tonal-a0: #261921;
+    --clr-surface-tonal-a10: #3b2e36;
+    --clr-surface-tonal-a20: #50454c;
+    --clr-surface-tonal-a30: #675d63;
+    --clr-surface-tonal-a40: #7f757b;
+    --clr-surface-tonal-a50: #978f94;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    background-color: var(--clr-surface-tonal-a0);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+.card {    
+    padding: 20px;
+    border-radius: 10px;
+    display: grid;
+}
+
+.selected:hover
+{
+    background-color: var(--clr-primary-a20);
+    transition: background-color 0.2s;
+}
+
+.card .text,
+.card .title,
+.card .description {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 20px;
+}
+
+.card .del {
+    justify-self: right;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    visibility: hidden;    
+}
+
+.card:hover .del {
+    visibility: visible;
+    transition: visibility 0.2s;
+} 
+
+.level0 {
+    background-color: var(--clr-surface-a0);
+}
+
+.level1 {
+    background-color: var(--clr-surface-a10);
+}
+
+.level2 {
+    background-color: var(--clr-surface-a20);
+}
+
+.level3 {
+    background-color: var(--clr-surface-a30);
+}
+
+.level4 {
+    background-color: var(--clr-surface-a40);
+}
+
+.level5 {
+    background-color: var(--clr-surface-a50);
+}
